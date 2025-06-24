@@ -1,0 +1,75 @@
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-heading {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 2.5rem;
+  color: #F9F6EF;
+  margin: 0;
+}
+
+.about-desc {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem;
+  color: #F5E8B7;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.about-button {
+  align-self: flex-start;
+  background-color: #FFD700;
+  color: #0F0F0F;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(213, 175, 88, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* STACK ON NARROW SCREENS */
+@media (max-width: 1024px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+    padding: 60px 16px;
+    text-align: center;
+  }
+  .about-text,
+  .about-image {
+    width: 100%;
+  }
+  .about-button {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,99 @@
+.tokenomics-wrapper {
+  padding: 80px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tokenomics-heading {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 2.5rem;
+  color: #F9F6EF;
+  margin-bottom: 8px;
+}
+
+.tokenomics-subheading {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.1rem;
+  color: #F5E8B7;
+  margin-bottom: 40px;
+}
+
+.tokenomics-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* New: gradient background & icon */
+.tokenomics-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 2px solid #FFD700;
+  border-radius: 20px;
+  padding: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tokenomics-card:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+  box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  color: #FFD700;
+  margin-bottom: 16px;
+}
+
+.card-value,
+.card-label {
+  word-break: break-word;
+  white-space: normal;
+  text-align: center;
+}
+
+.card-value {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 1.4rem;
+  color: #FFF;
+  margin-bottom: 8px;
+}
+
+.card-label {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.9rem;
+  color: #F5E8B7;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .tokenomics-wrapper {
+    padding: 60px 16px;
+  }
+  .tokenomics-heading {
+    font-size: 2rem;
+  }
+  .tokenomics-subheading {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .tokenomics-grid {
+    grid-template-columns: 1fr;
+  }
+  .tokenomics-card {
+    padding: 24px 12px;
+  }
+  .card-icon {
+    font-size: 2rem;
+  }
+  .card-value {
+    font-size: 1.2rem;
+  }
+  .card-label {
+    font-size: 0.85rem;
+  }
+}

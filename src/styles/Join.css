@@ -1,0 +1,97 @@
+.join-wrapper {
+  background: linear-gradient(135deg, #ffdf7e 0%, #ffb26b 100%);
+  padding: 80px 24px;
+  text-align: center;
+  color: #0f0f0f;
+}
+
+.join-heading {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 2.75rem;
+  margin-bottom: 16px;
+}
+
+.join-desc {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+}
+
+.join-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+
+.join-contact a {
+  color: #0f0f0f;
+  text-decoration: underline;
+}
+
+/* Container for the social buttons */
+.join-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* Base button style – fixed square size */
+.join-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: #ffffff;
+  border-radius: 12px;
+  text-decoration: none;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+  color: inherit; /* will be set per-brand */
+}
+
+/* Brand colors as defaults */
+.join-link.discord { color: #7289DA; }
+.join-link.telegram { color: #0088CC; }
+.join-link.instagram { color: #E4405F; }
+.join-link.x { color: #000000; }
+
+.join-link svg {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+/* Hover: full-bg brand color + white icon/text + zoom in */
+.join-link.discord:hover {
+  background: #7289DA; color: #fff; transform: scale(1.1);
+}
+.join-link.telegram:hover {
+  background: #0088CC; color: #fff; transform: scale(1.1);
+}
+.join-link.instagram:hover {
+  background: #E4405F; color: #fff; transform: scale(1.1);
+}
+.join-link.x:hover {
+  background: #000;    color: #fff; transform: scale(1.1);
+}
+
+.join-link span {
+  margin-top: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .join-heading { font-size: 2.25rem; }
+  .join-desc    { font-size: 1.1rem; }
+  .join-icons a {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+  }
+  .join-link svg { font-size: 2rem; }
+}

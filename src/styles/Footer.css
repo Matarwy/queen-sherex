@@ -1,0 +1,45 @@
+/* Footer container */
+.footer-wrapper {
+  background: rgba(0, 0, 0, 0.85);
+  border-top: 2px solid #FFD700;
+  padding: 40px 24px;
+  text-align: center;
+  color: #F5E8B7;
+}
+
+/* Social icons row */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 16px;
+}
+
+/* Icon links */
+.footer-icons a {
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+  color: #FFD700;
+  transform: scale(1.2);
+}
+
+/* Copyright text */
+.footer-copy {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive: reduce icon size on small screens */
+@media (max-width: 480px) {
+  .footer-icons {
+    gap: 24px;
+  }
+  .footer-icons a {
+    font-size: 1.5rem;
+  }
+}

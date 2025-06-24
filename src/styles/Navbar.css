@@ -1,0 +1,204 @@
+/* ============================= */
+/* ===   NAVBAR WRAPPER      === */
+/* ============================= */
+.navbar-wrapper {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* ============================= */
+/* ===   NAVBAR CONTAINER    === */
+/* ============================= */
+.navbar-container {
+  pointer-events: all;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #FFD700;
+  border-radius: 40px;
+  padding: 0 20px;
+  height: 64px;
+  box-sizing: border-box;
+  backdrop-filter: blur(6px);
+}
+
+/* LEFT: Logo + Title */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.navbar-logo {
+  height: 40px;
+  border-radius: 50%;
+}
+.navbar-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFF;
+  font-family: 'Dela Gothic One', sans-serif;
+}
+
+/* CENTER: Desktop Links */
+.navbar-center {
+  display: flex;
+  gap: 32px;
+}
+.navbar-center a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.navbar-center a:hover {
+  color: #FFD700;
+}
+
+/* RIGHT: Buy + Hamburger */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Buy Button */
+.navbar-buy-button {
+  background: #FFF2C2;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-weight: 700;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 210, 70, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.navbar-buy-button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 16px rgba(255, 215, 0, 0.6);
+}
+
+/* Hamburger icon */
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  color: white !important;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.navbar-hamburger span {
+  display: block;
+  height: 2px;
+  background: #FFF;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.navbar-hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.navbar-hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* MOBILE SLIDE-UP MENU */
+.navbar-mobile-menu {
+  position: fixed;
+  pointer-events: all;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1500;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.95);
+  border: 2px solid #FFD700;
+  border-radius: 16px 16px 0 0;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: slideUp 0.3s ease;
+}
+.navbar-mobile-menu a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+.navbar-mobile-menu a:hover {
+  color: #FFD700;
+  transform: scale(1.05);
+  text-shadow: 0 0 5px #FFD700;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%) translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE BREAKPOINT */
+@media (max-width: 768px) {
+  .navbar-center { display: none; }
+  .navbar-buy-button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+  .navbar-title {
+display: none;  }
+  .navbar-hamburger { display: flex; }
+}
+/* Navbar Left Section: Logo + Title */
+.navbar-left {
+  display: flex;
+  align-items: center; /* Vertically center the items */
+  gap: 12px;
+  line-height: 1; /* Remove extra line height */
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #FFF;
+  font-family: 'Dela Gothic One', sans-serif;
+
+  /* Ensure text height matches its size exactly */
+  line-height: 1 !important;
+
+  /* Vertically center text inside the container */
+  display: flex;
+  align-items: center;
+
+  /* Optional: tweak vertical position */
+  position: relative;
+  top: 2px; /* Adjust this value as needed for perfect alignment */
+}
