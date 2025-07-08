@@ -11,8 +11,6 @@ import Navbar from "./components/Navbar";
 import PartnersSlider from "./components/PartnersSlider";
 import RoadmapSection from "./components/RoadmapSection";
 import Tokenomics from "./components/Tokenomics";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
 
 function App() {
   return (
@@ -29,7 +27,6 @@ function App() {
       <Join />
       <FaqSection />
       <Footer />
-      <SpeedInsights />
     </>
   );
 }
